@@ -1,0 +1,34 @@
+mkdir tarefa_git_unidade3
+cd tarefa_git_unidade3
+git init
+echo "Conteúdo do arquivo 1" > arquivo1.txt
+echo "Conteúdo do arquivo 2" > arquivo2.txt
+echo "Conteúdo do arquivo 3" > arquivo3.txt
+git add .
+git commit -m "Commit inicial: adicionando três arquivos de texto"
+echo "Nova linha no arquivo 1" >> arquivo1.txt
+echo "Nova linha no arquivo 2" >> arquivo2.txt
+git status
+git diff
+git add .
+git commit -m "Alterações em arquivo1.txt e arquivo2.txt"
+git log
+git log --oneline
+git log --graph --all --decorate
+git revert HEAD
+echo "Modificação temporária no arquivo3" >> arquivo3.txt
+git stash
+git stash list
+git checkout -b nova_linha_desenvolvimento
+git checkout master
+git stash pop
+git reflog
+git tag -a v1.0 -m "Versão estável inicial" 4e319b8
+git remote add origin https://github.com/MarlonHD/tarefa_git_unidade3.git
+git branch -M main
+git push -u origin main
+git push origin v1.0
+vim comandos.txt
+git add comandos.txt
+git commit -m "Adicionando histórico dos comandos utilizados"
+git push
